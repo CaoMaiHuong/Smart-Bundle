@@ -1,0 +1,9 @@
+{{ content_for_index }}
+
+   {% for product in collection.best_selling.products limit: product_limit %}
+      <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
+        {% include 'product-card-grid', max_height: max_height %}
+      </li>
+	{% endfor %}
+
+
